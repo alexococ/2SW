@@ -1,0 +1,39 @@
+const cadena = new cadena(40);
+
+for(let x = 0; cadena.length(); x++){
+    cadena[x] = cadena[x] + 1;
+}
+
+function quitarArray(cadena2){
+    //para eliminar la segunda posición
+    for(let x = 0; x < cadena2.length(); x = x+2){
+        delete(cadena2[x]);
+    }
+    let resultado = cadena2;
+   //para eliminar la tercera posición
+    for(let x = 0; x < cadena2.length(); x = x+3){
+        delete(cadena2[x]);
+    }
+    let resultado2 = cadena2;
+    // para eliminar la cuarta posición 
+    for(let x = 0; x < cadena2.length(); x = x+4){
+        delete(cadena2[x]);
+    }
+    let resultado3 = cadena2;
+    return cadena2;
+}
+
+
+function Superviviente(cadena3, numero){
+    let existence = false;
+    for(let x = 0; x < cadena3.length(); x = x++){
+        if(numero === cadena3[x]){
+            existence = true;
+        }
+    }
+    return `El número que has introducido es ${existence}`;    
+}
+
+let prueba = prompt("introduce un número");
+quitarArray(cadena);
+Superviviente(cadena,prueba);
